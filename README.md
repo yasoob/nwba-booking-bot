@@ -9,3 +9,5 @@ $ python -m venv venv
 $ source venv/bin/activate
 $ pip install selenium
 ```
+
+You might also have to download chrome webdriver and adjust the path on line 36 appropriately.
