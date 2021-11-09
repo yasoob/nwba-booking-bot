@@ -14,8 +14,8 @@ def next_7_dates():
 
 def login(browser):
     print("[+] Logging in.")
-    browser.find_element("name", "username").send_keys("hi@yasoob.me")
-    browser.find_element("name", "password").send_keys("4&U8asvoa@zq1q")
+    browser.find_element("name", "username").send_keys("your_email")
+    browser.find_element("name", "password").send_keys("your_password")
     browser.find_element("xpath", "//input[@type='SUBMIT']").click()
 
 def reserve_time(browser, favorite_times):
@@ -42,7 +42,6 @@ def main():
     timeout_secs = 20
     calendar_btn = WebDriverWait(browser, timeout_secs)\
                         .until(expected_conditions.presence_of_element_located((By.XPATH, "//td[@id='idNavigation']//li[2]//a")))
-    # calendar_btn = browser.find_element("xpath", "//td[@id='idNavigation']//li[2]//a")
     user_id = calendar_btn.get_attribute('href').split('=')[-1].split(':')[-1]
     calendar_btn.click()
 
